@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: phpmyadmin
+    restart: always
+    environment:
+      # Permite escribir cualquier Host en el login (Servidor)
+      PMA_ARBITRARY: 1
+      
+      # Valores sugeridos que aparecerán por defecto al cargar la página
+      PMA_HOST: 143.198.67.118
+      PMA_PORT: 3307
+      
+      # Mejoras de rendimiento y límites
+      UPLOAD_LIMIT: 512M
+      MEMORY_LIMIT: 512M
+      MAX_EXECUTION_TIME: 600
+    ports:
+      - "8082:80"
