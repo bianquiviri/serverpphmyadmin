@@ -10,7 +10,7 @@ services:
       PMA_ARBITRARY: 1
       
       # Valores sugeridos que aparecerán por defecto al cargar la página
-      PMA_HOST: 143.198.67.118
+      PMA_HOST: 192.168.68.100
       PMA_PORT: 3307
       
       # Mejoras de rendimiento y límites
