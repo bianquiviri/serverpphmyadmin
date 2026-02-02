@@ -10,12 +10,17 @@ services:
       PMA_ARBITRARY: 1
       
       # Valores sugeridos que aparecerán por defecto al cargar la página
-      PMA_HOST: 192.168.68.100
-      PMA_PORT: 3307
-      
+      PMA_HOST: mysql_db
+      PMA_PORT: 3306      
       # Mejoras de rendimiento y límites
       UPLOAD_LIMIT: 512M
       MEMORY_LIMIT: 512M
       MAX_EXECUTION_TIME: 600
     ports:
-      - "8082:80"
+      - "127.0.0.1:8082:80"
+    networks:
+    - bianquiviri_network
+
+networks:
+    bianquiviri_network:
+      external: true
